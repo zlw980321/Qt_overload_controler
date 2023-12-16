@@ -1,1 +1,3 @@
 基于C++的实现qt按钮悬浮变色效果
+mainwindow中可以直接查看效果
+newButton类中为具体实现方法
