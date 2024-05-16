@@ -25,11 +25,11 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../FFmpegVideoPlay/release/ -ldwmapi
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../FFmpegVideoPlay/debug/ -ldwmapi
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/framelessWidget/release/ -ldwmapi
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/framelessWidget/debug/ -ldwmapi
 
-INCLUDEPATH += $$PWD/../FFmpegVideoPlay/dwmapi
-DEPENDPATH += $$PWD/../FFmpegVideoPlay/dwmapi
+INCLUDEPATH += $$PWD/framelessWidget/dwmapi
+DEPENDPATH += $$PWD/framelessWidget/dwmapi
 
 DESTDIR = $$PWD/bin/release
 
