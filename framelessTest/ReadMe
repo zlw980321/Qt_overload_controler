@@ -1,0 +1,8 @@
+项目文件使用时
+1.Qt项目新建QWidget设计器类
+2.framelessWidget文件夹拷到自己的项目目录（路径自定义），并在项目中导入
+3.新建完成后将继承的QWidget改为framelessWidget（包含头文件class的继承和cpp构造的继承）
+4.将资源文件qrc加入文件或者直接修改framelesswidget.cpp中几个button的Icon路径为自己的icon
+5.目前仅支持windows的dwmapi库进行Windows窗体，支持基本的圆角，边框阴影，贴靠动画，win11的snapLayout，推荐使用win11+Qt5以上使用（win11以下不包含部分dwmapi支持库）
+6.mingw编译问题不大，msvc需要的dwmapi.lib在win10系统下出现的标题栏点击拖动窗体无效问题参考第5条
+7.窗体ui编辑时，由于未做多层widget封装，仅为单层，需要手动定位控件位置，其余项自行查看头文件参数定义或者自定义
